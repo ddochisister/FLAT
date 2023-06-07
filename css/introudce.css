@@ -1,0 +1,405 @@
+@charset "UTF-8";
+
+
+/* 모바일용 CSS */
+/* 기본 CSS */
+
+#wrap{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+
+    /* flex-direction: column;
+    flex-wrap: nowrap; */
+    /* 또는 */
+    flex-flow: column nowrap;
+}
+
+
+
+
+
+/* 인포 영역 CSS */
+.info_section{
+    width: 100%;
+    background: #00c853;
+    border-bottom: 1px solid white;
+    order: 1;
+}
+.info_list{
+    display: flex;
+}
+.info_list li{
+    width: 25%;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+.info_list li a{
+    display: block;
+    padding: 15px 0;
+}
+
+
+
+
+
+/* header영역 CSS */
+.header{
+    width: 100%;
+    position: relative;
+    order: 2;
+}
+.logo{
+    width: 100%;
+    padding: 30px 0;
+    background: #00c853;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0 1px 1px #0f5e31;
+    line-height: 25px;
+}
+.nav{
+    width: 100%;
+}
+.gnb{
+    display: none;
+}
+.gnb li{
+    background: #16314f;
+    display: flex;
+}
+.gnb li a{
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 20px 0;
+    text-indent: 20px;
+}
+.gnb li span{
+    width: 20%;
+    text-indent: -9999px;
+    background: url("../images/s_images/sub_menu_toggle_btn.png") no-repeat center center;
+    cursor: pointer;
+}
+.menu_toggle_btn{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../images/s_images/menu_toggle_btn.png") no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+
+
+/* sub_header_section  영역 */
+.sub_header_section{
+    width: 100%;
+    order: 3;
+    background: #219af7;
+    text-align: center;
+    padding: 50px 0;
+}
+.sub_header_section h2{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.flat_list{}
+.flat_list li{
+    display: inline-block;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+/* content_section 영역 */
+.content_section{
+    order: 4;
+    padding: 20px;
+    background: #fff;
+}
+.content_section>div{
+    margin-top: 50px;
+}
+.content_section>div:first-child{
+    margin-top: 20px !important;
+}
+.cont_01{
+    text-align: center;
+}
+.cont_01 img{
+    width: 100%;
+}
+.cont_01 h3{
+    font-size: 20px;
+    margin: 25px 0 15px 0;
+    color: #333;
+}
+.cont_01 p{
+    font-size: 14px;
+    line-height: 25px;
+    color: #666;
+    text-align: justify;
+}
+.cont_02{}
+.cont_02>article{
+    padding-top: 40px;
+    text-align: center;
+}
+.cont_02>article:nth-child(1){
+    padding-top: 0 !important;
+}
+.cont_02 img{
+    max-width: 100%;
+}
+.cont_02 h3{
+    font-size: 20px;
+    margin: 25px 0 15px 0;
+    color: #333;
+}
+.cont_02 p{
+    font-size: 14px;
+    line-height: 25px;
+    color: #666;
+    text-align: justify;
+}
+.cont_03{}
+.cont_03 h3{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #00c853;
+    padding-bottom: 10px;
+}
+.cont_03 .para{}
+.cont_03 .para p{
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    text-align: justify;
+}
+.cont_03 .para p:first-child{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+/* footer 영역 CSS */
+.footer{
+    order: 5;
+    width: 100%;
+    background: #474747;
+}
+.footer p{
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0 1px 1px #191919;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿 반응형 CSS 768px */
+@media screen and (min-width:768px) {
+    /* 기본 CSS */
+    #wrap{
+        flex-flow: row wrap;
+    }
+
+
+    /* header영역 CSS */
+    .header{}
+    .logo{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 16%;
+        z-index: 10;
+    }
+    .nav{
+        min-height: 80px;
+        background: #00c853;
+        position: relative;
+    }
+    .gnb{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+    }
+    .menu_toggle_btn{
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+    }
+
+
+    /* sub_header_section  영역 */
+
+
+    /* content_section 영역 */
+    .content_section{
+        padding: 40px;
+    }
+    .content_section>div{
+        margin-top: 120px;
+    }
+
+
+    /* footer 영역 CSS */
+    .footer p{
+        padding: 40px 0;
+    }
+
+
+}  /* min-width:768px */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* pc 반응형 CSS 960px */
+@media screen and (min-width:960px) {
+/* 기본 CSS */
+    #wrap{
+        width: 90%;
+        position: relative;
+    }
+
+
+    /* 인포 영역 CSS */
+    .info_section{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        order: 0;
+        z-index: 20;
+        width: auto;
+        border-bottom: 0;
+    }
+    .info_list li{
+        width: auto;
+        margin-left: 15px;
+    }
+    .info_list li a{
+        padding: 0;
+    }
+
+
+    /* header영역 CSS */
+    .header{
+        order: 1;
+        display: flex;
+        justify-content: flex-end;
+        position: static;
+    }
+    .logo{
+        width: 15%;
+    }
+    .nav{
+        width: 85%;
+        display: flex;
+        position: static;
+        align-items: center;
+    }
+    .gnb{
+        display: flex !important;
+        flex-direction: row;
+        width: 100%;
+        position: static;
+    }
+    .gnb li{
+        display: block;
+        background: none;
+        margin-left: 5%;
+    }
+    .gnb li a{
+        width: auto;
+        padding: 0;
+        text-indent: 0;
+    }
+    .gnb li span{
+        display: none;
+    }
+    .menu_toggle_btn{
+        display: none;
+    }
+
+
+    
+    /* sub_header_section  영역 */
+    .sub_header_section{
+        order: 2;
+    }
+
+
+    /* content_section 영역 */
+    .content_section{
+        order: 3;
+        padding: 60px;
+    }
+    .cont_02{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cont_02>article{
+        width: 30%;
+        padding-top: 0;
+    }
+    .cont_03 .para{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cont_03 .para p{
+        width: 47%;
+    }
+    .cont_03 .para p:first-child{
+        margin-bottom: 0 !important;
+    }
+    
+
+    
+    /* footer 영역 CSS */
+    .footer p{
+        text-align: left;
+        padding-left: 5%;
+    }
+
+
+}  /* min-width:960px */
